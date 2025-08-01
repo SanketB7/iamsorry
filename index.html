@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I Am Sorry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://i.imgur.com/w1URHkC.png') repeat;
+      font-family: 'Patrick Hand', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .message-box {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      animation: floatIn 1.5s ease;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ff4b5c;
+      margin: 0 0 20px 0;
+      animation: popIn 1.2s ease;
+    }
+
+    img {
+      width: 150px;
+      animation: pulse 2s infinite;
+    }
+
+    button {
+      margin-top: 30px;
+      background-color: #ff4b5c;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e63946;
+    }
+
+    p {
+      margin-top: 25px;
+      color: #444;
+      font-size: 1.2rem;
+      display: none;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes floatIn {
+      0% { transform: translateY(100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.6); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="message-box">
+    <img src="https://i.imgur.com/xxQW8Sd.gif" alt="cute sorry">
+    <h1>I’m really, really sorry 😢</h1>
+    <button onclick="showMessage()">Will you forgive me?</button>
+    <p id="message">You’re the best! I’ll make it up to you ❤️</p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sweet.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function showMessage() {
+      document.getElementById('message').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
